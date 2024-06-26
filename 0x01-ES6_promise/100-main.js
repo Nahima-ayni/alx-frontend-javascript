@@ -1,15 +1,20 @@
-import asyncUploadUser from "./100-await";
+import { uploadPhoto, createUser } from './utils.js';
 
-const test = async () => {
-    const value = await asyncUploadUser();
-    console.log(value);
-};
+export async function asyncUploadUser() {
+  try {
+    const [photoResponse, userResponse] = await Promise.all([
+      uploadPhoto(),
+      createUser()
+    ]);
 
-test();
-
-bob@dylan:~$ 
-bob@dylan:~$ npm run dev 100-main.js 
-{
-  photo: { status: 200, body: 'photo-profile-1' },
-  user: { firstName: 'Guillaume', lastName: 'Salva' }
+    return {
+      photo: photoResponse,
+      user: userResponse
+    };
+  } catch (error) {
+    return {
+      photo: null,
+      user: null
+    };
+  }
 }
