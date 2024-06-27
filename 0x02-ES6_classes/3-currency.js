@@ -11,7 +11,7 @@ export default class Currency {
     if (typeof value === 'string') {
       this._name = value; 
     } else {
-        throw new error('code is not a string')	    
+        throw new Error('code is not a string')	    
     }
   }
 
