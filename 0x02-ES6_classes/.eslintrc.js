@@ -1,9 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
+    browser: false,
     es6: true,
     jest: true,
-    node: true,
   },
   extends: [
     'airbnb-base',
@@ -29,19 +28,10 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides: [
+  overrides:[
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    },
-    {
-      files: ['.eslintrc.js', 'babel.config.js'],
-      env: {
-        node: true,
-      },
-      rules: {
-        'no-undef': 'off',
-      },
-    },
-  ],
+    }
+  ]
 };
