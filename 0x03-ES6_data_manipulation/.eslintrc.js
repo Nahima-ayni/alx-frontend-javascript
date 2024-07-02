@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:jest/all',
+    'plugin:@typescript-eslint/recommended'
   ],
   globals: {
     Atomics: 'readonly',
@@ -16,7 +16,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['jest'],
+  plugins: [
+    '@typescript-eslint'
+  ],
   rules: {
     'max-classes-per-file': 'off',
     'no-underscore-dangle': 'off',
@@ -28,10 +30,11 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
+
