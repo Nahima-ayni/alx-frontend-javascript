@@ -1,9 +1,4 @@
-namespace Subjects {
-    export interface Teacher {
-        firstName: string;
-        lastName: string;
-	experienceTeachingC?: number;
-    }
+/// <reference path="Subject.ts" />
 
 class Cpp extends Subject {
 	getRequirements(): string {
