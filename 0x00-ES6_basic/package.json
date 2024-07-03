@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "eslint",
     "check-lint": "eslint [0-9]*.js",
-    "dev": "babel-node --presets=@babel/preset-env",
+    "dev": "babel-node --presets=@babel/preset-env ./1-main.js",
     "test": "jest",
     "full-test": "eslint [0-9]*.js && jest"
   },
