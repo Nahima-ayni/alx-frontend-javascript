@@ -1,5 +1,3 @@
-Certainly! Here's a detailed README that covers all the topics we've discussed: Basic Types in TypeScript, Interfaces, Classes, Functions, Working with the DOM and TypeScript, Generic Types, Nominal Typing, and Merging Declarations.
-
 ---
 
 # TypeScript Deep Dive
