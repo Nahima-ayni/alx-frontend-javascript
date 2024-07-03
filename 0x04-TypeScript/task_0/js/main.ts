@@ -18,18 +18,22 @@ let studentsList: Student[] = [
     age: 19,
     location: "Nakuru",
   }
-]
-students_table = document.createElement('table')
-for student of studentsList {
-  let firstName_row = document.createElement('tr')
-  let location_row = document.createElement('td')
+];
 
-  let firstNameCell = document.createElement('td')
-  let locationCell = document.createElement('td')
+const studentsTable = document.createElement('table');
 
-  firstNameCell.innerText = student.firstName
-  firstName_row.appendChild(firstNameCell)
+studentsList.forEach(student => {
+  const row = document.createElement('tr');
 
-  locationCell.innerText = student.location
-  location_row.appendChild(locationCell)
-}
+  const firstNameCell = document.createElement('td');
+  firstNameCell.innerText = student.firstName;
+  row.appendChild(firstNameCell);
+
+  const locationCell = document.createElement('td');
+  locationCell.innerText = student.location;
+  row.appendChild(locationCell);
+
+  studentsTable.appendChild(row);
+});
+
+document.body.appendChild(studentsTable);
